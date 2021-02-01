@@ -1,0 +1,57 @@
+.banner{
+    background: linear-gradient(0deg,#ff6a00 0,#ee0979 100%);
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 215px;
+        text-align: center;
+        padding-bottom: 160px;
+        &-title{
+            @include font(96px,$white,normal);
+            font-family: $cata;
+            font-weight: 800;
+            line-height: 115px;
+        }
+        &-subTitle{
+            @include font(64px,$white,normal);
+            font-family: $cata;
+            font-weight: 800;
+            line-height: 77px;
+        }
+        &-btn{
+            margin-top: 48px;
+            padding: 26px 48px;
+            font-family: $lato;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 32px;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            transition: all ease-in-out 0.2s;
+            @include font(14px,$white,normal);
+            background-color: $pink;
+            &:hover{
+                background-color: #bb1364;
+            }
+            &:focus{
+                box-shadow: 0 0 0 0.2rem rgb(238 ,9 ,121);
+            }
+        }
+        @include max-breakpoint(993){
+            padding-top: 184px;
+            padding-bottom: 112px;  
+            text-align: center;
+            &-title{
+                line-height: 77px;
+                font-size: 64px;
+            }
+            &-subTitle{
+                line-height: 38px;
+                font-size: 32px;
+            }
+        }
+    }
+}
